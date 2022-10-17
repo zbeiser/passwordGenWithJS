@@ -19,7 +19,8 @@ var numberChoice = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChoice = ["!", "@", "#", "$", "%", "^", "&", "*"];
 
 function generatePassword() {
-  // The code below will allow the user to choose the password character length and will check if they entered a value between 8 and 128 and if it's a number.
+  // The code below will allow the user to choose the password character length. It will then check if they entered a value between 8 and 128 and if 
+  // it's a number. If either are false, it returns the function. 
   var passLength = window.prompt("Please specify a password character length, with a minimum of 8 characters and a maximum of 128 characters.");
   passLength = parseInt(passLength, 10); 
   if (passLength < 8 || passLength > 128) {
@@ -51,7 +52,7 @@ function generatePassword() {
   return("Please try again.");
   }
   // The code below will declare a new variable to be the end result password. Then it will add and assign randomly selected characters from the user's 
-  // choices into that variable until the length of the password matches the number selected by the user for password length. Then it returns the function.
+  // choices into that variable until the length of the password matches the number selected by the user for password length. Then it returns the password.
   var password = [];
   do{
     password += userChoice[Math.floor(Math.random() * userChoice.length)];
