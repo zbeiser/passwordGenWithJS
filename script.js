@@ -17,10 +17,8 @@ var lowerLetChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"
 var upperLetChoice = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numberChoice = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChoice = ["!", "@", "#", "$", "%", "^", "&", "*"];
-var userChoice = [];
 
 function generatePassword() {
-  /////////////////////////// WRITE YOUR CODE HERE /////////////////////////
   // The code below will allow the user to choose the password length and will check if they entered a value between 8 and 128 and if it's a number.
   var passLength = window.prompt("Please type a password length, with a minimum of 8 characters and a maximum of 128 characters.");
   passLength = parseInt(passLength, 10); 
@@ -32,6 +30,8 @@ function generatePassword() {
     window.alert("Password length must be a number.");
     return;
   }
+  // The code below declares a variable that user will confirm their character options into.
+  var userChoice = [];
   // The code below will allow the user to choose what kind of characters they want included in their password.
   if (window.confirm("Would you like to include lowercase characters in your password?") == true) {
     userChoice = userChoice.concat(lowerLetChoice);
