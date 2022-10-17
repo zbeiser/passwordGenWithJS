@@ -51,12 +51,10 @@ function generatePassword() {
   return;
   }
   // Random generator time. Need to have a random selector choose from userChoice array a passLength number of times, adding results to password each time.
-  // Probably going to need: 
-  // array[math.floor(math.random() * array.length)] for random selection from userChoice
-  // push() to add elements to the array
-  // toString() to convert the seperate array elements added to password into a single string
-  // a for loop to cycle through userChoice the desired number of times?
-  // The code below will successfully do this process for one character, how do I get it to do it passLength number of times?
-  var x = userChoice[Math.floor(Math.random() * userChoice.length)];
-  return x;
+  var password = [];
+  do{
+    password += userChoice[Math.floor(Math.random() * userChoice.length)];
+  }
+  while (password.length < passLength);
+  return password;
 }
