@@ -12,7 +12,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 ///////////////////////// DO NOT CHANGE ABOVE HERE /////////////////////////
-
+// These variables represent the different options for the password character types that the user can choose from.
 var lowerLetChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperLetChoice = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numberChoice = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -50,4 +50,11 @@ function generatePassword() {
   window.alert("Please choose at least one type of character.");
   return;
   }
+  // Probably going to need: 
+  // array[math.floor(math.random() * array.length)] for random selection from userChoice
+  // push() to add elements to the array
+  // toString to convert elements to strings
+  // a for loop to cycle through userChoice the desired number of times
+  var passCode = userChoice[Math.floor(Math.random() * userChoice.length)];
+  return passCode;
 }
