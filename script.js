@@ -50,7 +50,8 @@ function generatePassword() {
   window.alert("Please choose at least one type of character.");
   return;
   }
-  // Random generator time. Need to have a random selector choose from userChoice array a passLength number of times, adding results to password each time.
+  // The code below will declare a new variable to be the end result password. Then it will add and assign randomly selected characters from the user's 
+  // choices into that variable until the length of the password matches the number selected by the user for password length. Then it returns the function.
   var password = [];
   do{
     password += userChoice[Math.floor(Math.random() * userChoice.length)];
