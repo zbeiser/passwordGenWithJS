@@ -21,5 +21,14 @@ var userChoice = ("");
 
 function generatePassword() {
   /////////////////////////// WRITE YOUR CODE HERE /////////////////////////
-  
+  var passLength = window.prompt("Please type a password length, with a minimum of 8 characters and a maximum of 128 characters.");
+    passLength = parseInt(passLength, 10); 
+    if (passLength < 8 || passLength > 128) {
+      window.alert("Password length must be a number between 8 and 128 characters.");
+      return;
+    }
+    else if (Number.isInteger(passLength) == false) {
+      window.alert("Password length must be a number.");
+      return;
+    }
 }
