@@ -45,8 +45,9 @@ function generatePassword() {
   if (window.confirm("Would you like to include special characters in your password?") == true) {
     userChoice = userChoice.concat(specialChoice);
   }
+  // The code below will check if the user picked any of the options for password characters. If not, it returns the function.
   if (userChoice.length == 0) {
-  window.alert("Please choose at least one character.");
+  window.alert("Please choose at least one type of character.");
   return;
   }
 }
