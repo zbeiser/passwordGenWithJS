@@ -23,15 +23,15 @@ function generatePassword() {
   /////////////////////////// WRITE YOUR CODE HERE /////////////////////////
   // The code below will allow the user to choose the password length and will check if they entered a value between 8 and 128 and if it's a number.
   var passLength = window.prompt("Please type a password length, with a minimum of 8 characters and a maximum of 128 characters.");
-    passLength = parseInt(passLength, 10); 
-    if (passLength < 8 || passLength > 128) {
-      window.alert("Password length must be a number between 8 and 128 characters.");
-      return;
-    }
-    else if (Number.isInteger(passLength) == false) {
-      window.alert("Password length must be a number.");
-      return;
-    }
+  passLength = parseInt(passLength, 10); 
+  if (passLength < 8 || passLength > 128) {
+    window.alert("Password length must be a number between 8 and 128 characters.");
+    return;
+  }
+  else if (Number.isInteger(passLength) == false) {
+    window.alert("Password length must be a number.");
+    return;
+  }
   // The code below will allow the user to choose what kind of characters they want included in their password.
   if (window.confirm("Would you like to include lowercase characters in your password?") == true) {
     userChoice = userChoice.concat(lowerLetChoice);
@@ -45,5 +45,8 @@ function generatePassword() {
   if (window.confirm("Would you like to include special characters in your password?") == true) {
     userChoice = userChoice.concat(specialChoice);
   }
-  console.log(userChoice);
+  if (userChoice.length == 0) {
+  window.alert("Please choose at least one character.");
+  return;
+  }
 }
