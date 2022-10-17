@@ -19,20 +19,20 @@ var numberChoice = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChoice = ["!", "@", "#", "$", "%", "^", "&", "*"];
 
 function generatePassword() {
-  // The code below will allow the user to choose the password length and will check if they entered a value between 8 and 128 and if it's a number.
-  var passLength = window.prompt("Please type a password length, with a minimum of 8 characters and a maximum of 128 characters.");
+  // The code below will allow the user to choose the password character length and will check if they entered a value between 8 and 128 and if it's a number.
+  var passLength = window.prompt("Please specify a password character length, with a minimum of 8 characters and a maximum of 128 characters.");
   passLength = parseInt(passLength, 10); 
   if (passLength < 8 || passLength > 128) {
-    window.alert("Password length must be a number between 8 and 128 characters.");
-    return;
+    window.alert("Password character length must be a number between 8 and 128 characters.");
+    return("Please try again.");
   }
   else if (Number.isInteger(passLength) == false) {
-    window.alert("Password length must be a number.");
-    return;
+    window.alert("Password character length must be a number.");
+    return("Please try again.");
   }
-  // The code below declares a variable that user will confirm their character options into.
+  // The code below declares an empty array variable that the user will confirm their character options into.
   var userChoice = [];
-  // The code below will allow the user to choose what kind of characters they want included in their password.
+  // The code below will use if statements to allow the user to choose what kind of characters they want included in their password.
   if (window.confirm("Would you like to include lowercase characters in your password?") == true) {
     userChoice = userChoice.concat(lowerLetChoice);
   }
@@ -48,7 +48,7 @@ function generatePassword() {
   // The code below will check if the user picked any of the options for password characters. If not, it returns the function.
   if (userChoice.length == 0) {
   window.alert("Please choose at least one type of character.");
-  return;
+  return("Please try again.");
   }
   // The code below will declare a new variable to be the end result password. Then it will add and assign randomly selected characters from the user's 
   // choices into that variable until the length of the password matches the number selected by the user for password length. Then it returns the function.
