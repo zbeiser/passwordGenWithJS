@@ -7,11 +7,11 @@ This purpose of this project is to create a webpage that allows you to randomly 
 N/A
 
 ## Usage
-Website's URL: https://zbeiser.github.io/paswordGenWithJS/
+Website's URL: https://zbeiser.github.io/passwordGenWithJS/
 
 Visit this website and click the generate password button. Then follow the prompts to choose your password character length and character types. You'll then be provided with a unique, randomly generated password! Take a look at the JavaScript file to learn more about the basic usage of variables, array methods, functions, if statements, loops, and other JavaScript concepts.
 
-![Screenshot](https://github.com/zbeiser/paswordGenWithJS/blob/main/passwordGen-Screenshot.png?raw=true)
+![Screenshot](https://github.com/zbeiser/passwordGenWithJS/blob/main/passwordGen-Screenshot.png?raw=true)
 
 ## Credits
 Thank you to the UW Coding Bootcamp staff and students, as well as W3Schools and Mozilla MDN Web Docs for providing numerous educational resources during the development of this project. Special thanks to Marta Wambaugh for our study session discussing pseudocode and solutions to random selection with JavaScript.
